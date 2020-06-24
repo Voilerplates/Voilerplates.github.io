@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+:root {
+
+    font-family: Pangolin, Arial, Helvetica, sans-serif;    
+
+    --brand-color: linear-gradient(rgb(0, 98, 255), rgb(38, 100, 200));
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.background-rainbow {
+    background: var(--brand-color);
+    animation: rainbow 60s infinite;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.root .pre-content {
+    text-align: center;
+    color: white;
+    font-size: calc(1rem * 1.25);
+    letter-spacing: 0.2rem;
+}
+
+h1, h2 {
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+h1::selection, h2::selection {
+    background-color: rgb(255, 0, 76);
+}
+
+img {
+    border-radius: 50%;
+    width: 6rem;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25),
+                0px 0px 50px rgb(255, 0, 0, 0.5);
+    transition: 100ms ease-in;
+}
+
+img:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+
+a .social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 3rem;
+    transition: 1100ms;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25),
+                0px 0px 50px rgb(255, 0, 0, 0.5);
+}
+
+a .social-container:hover {
+    width: 5rem;
+    border-radius: 0.5rem;
+    transition: 100ms;
+}
+
+a .social-container i {
+    margin-left: 2px;
+    color: black;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
